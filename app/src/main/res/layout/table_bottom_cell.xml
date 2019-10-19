@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/blackGray">
+
+    <ImageButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/confirm_button_bg"
+        android:layout_centerInParent="true"
+        tools:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/textConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/btnConfirm"
+        android:layout_alignEnd="@id/btnConfirm"
+        android:layout_alignBottom="@id/btnConfirm"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/text_confirm_button"
+        android:textColor="@color/confirm_text_color"
+        android:textSize="12sp" />
+</RelativeLayout>

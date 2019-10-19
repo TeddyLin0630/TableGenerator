@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Table Generator</string>
+    <string name="edit_outline_hint_row">Rows (Max:%d)</string>
+    <string name="edit_outline_hint_column">Columns (Max:%d)</string>
+    <string name="btn_table_generate">Generate</string>
+    <string name="text_app_info">Owner: Teddy Lin (v%s)</string>
+    <string name="text_cell_random">Random</string>
+    <string name="text_confirm_button">Confirm</string>
+    <string name="error_number_too_small">Min number is 1</string>
+    <string name="error_number_too_large">Max number is %d</string>
+</resources>
