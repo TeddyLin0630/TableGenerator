@@ -44,7 +44,7 @@ class MainFragment : Fragment() {
         binding.editColumn.addTextChangedListener {
             val columns = it.toString().toIntOrNull() ?: 1
             binding.editColumnLayout.error =
-                errorMessage(viewModel.checkNumberOfRowAndColumn(columns, MAX_NUMBER_OF_COLUMNS))
+                errorMessage(viewModel.checkNumberOfRowAndColumn(columns, MAX_NUMBER_OF_COLUMNS), MAX_NUMBER_OF_COLUMNS)
             updateButtonState()
         }
 
@@ -53,7 +53,7 @@ class MainFragment : Fragment() {
         binding.editRow.addTextChangedListener {
             val rows = it.toString().toIntOrNull() ?: 1
             binding.editRowLayout.error =
-                errorMessage(viewModel.checkNumberOfRowAndColumn(rows, MAX_NUMBER_OF_ROWS))
+                errorMessage(viewModel.checkNumberOfRowAndColumn(rows, MAX_NUMBER_OF_ROWS), MAX_NUMBER_OF_ROWS)
             updateButtonState()
         }
 
@@ -74,10 +74,10 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun errorMessage(error: EditError, vararg params: Any) =
+    private fun errorMessage(error: EditError, limit: Int) =
         when (error) {
             EditError.NUMBER_TOO_SMALL -> getString(R.string.error_number_too_small)
-            EditError.NUMBER_TOO_LARGE -> getString(R.string.error_number_too_large, params)
+            EditError.NUMBER_TOO_LARGE -> getString(R.string.error_number_too_large, limit)
             else -> null
         }
 
